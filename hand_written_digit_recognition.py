@@ -23,7 +23,7 @@ X_test_data=df_test.iloc[:, ]
 X_train,X_test,y_train,y_test= train_test_split(X_training_data, y_training_data , test_size=0,random_state=4)
 
 print("Neural Network Start:")
-clf = MLPClassifier(solver='sgd', activation='logistic',alpha=0.0001,hidden_layer_sizes=(15,7),max_iter=2000, random_state=1)
+clf = MLPClassifier(solver='sgd', activation='logistic',alpha=0.0001,hidden_layer_sizes=(100,30),max_iter=2000, random_state=1)
 clf.fit(X_train, y_train)
 print "training done:"
 y_pred=clf.predict(X_test_data)
